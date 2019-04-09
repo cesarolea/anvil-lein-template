@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+## 0.2.0 - 2019-04-09
 ### Added
 - Support for project optional components. Only 1 option supported for now...
 - Optional Docker support with +docker option.
