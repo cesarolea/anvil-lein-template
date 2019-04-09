@@ -18,12 +18,15 @@ A leiningen template for a barebones ClojureScript project with figwheel-main.
 
 ## Usage
 
-The purpose of this template is to getting you started with ClojureScript as soon as possible. As a result it doesn't have any features or optional libraries.
+The purpose of this template is to get you started with ClojureScript as soon as possible. As a result it has very few extra features or options beyond ClojureScript and Figwheel.
 
 There are some aliases defined:
 
 - `lein fig-dev` will start the fighweel REPL at `localhost:9500` but it won't start your browser by default. So you need to manually navigate to `localhost:9500` so that figwheel connects and the REPL is made available.
 - `lein fig-prod` will compile the project with all optimizations turned on and generate a single JS file, suitable for production use.
+
+### Options
+- `+docker` generates a `Dockerfile` and suitable `docker-compose.yml` to run the project in a Docker container, while keeping the ability to connect to the REPL and a working Figwheel.
 
 ### Development workflow
 
