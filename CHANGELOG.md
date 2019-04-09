@@ -2,9 +2,12 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
-### Changed
-- Version is now 0.1.0. Removed SNAPSHOT for Clojars publication.
+### Added
+- Support for project optional components. Only 1 option supported for now...
+- Optional Docker support with +docker option.
+- Added latest version badge.
 
 ## 0.1.0 - 2019-04-08
 ### Added
 - Initial version
+- Version is now 0.1.0. Removed SNAPSHOT for Clojars publication.

@@ -1,5 +1,7 @@
 # anvil
 
+[![Clojars Project](https://img.shields.io/clojars/v/anvil/lein-template.svg)](https://clojars.org/anvil/lein-template)
+
 A leiningen template for a barebones ClojureScript project with figwheel-main.
 
 ## Getting Started
