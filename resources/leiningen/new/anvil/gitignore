@@ -50,3 +50,4 @@ bundles/
 vendor/pkg/
 pyenv
 Vagrantfile
+.rebel_readline_history
