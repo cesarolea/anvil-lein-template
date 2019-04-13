@@ -18,7 +18,8 @@
                ["dev.cljs.edn" (render "dev.cljs.edn" data)]
                ["prod.cljs.edn" (render "prod.cljs.edn" data)]
                ["resources/public/index.html" (render "index.html" data)]
-               ["project.clj" (render "project.clj" data)]]
+               ["project.clj" (render "project.clj" data)]
+               [".gitignore" (render "gitignore" data)]]
          docker [["Dockerfile" (render "Dockerfile" data)]
                  ["docker-compose.yml" (render "docker-compose.yml" data)]]]
 

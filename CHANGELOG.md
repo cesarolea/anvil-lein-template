@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. This change
 ## [Unreleased]
 ### Modified
 - Added information about template options to readme.
+### Added
+- `.gitignore`
 
 ## 0.2.0 - 2019-04-09
 ### Added
