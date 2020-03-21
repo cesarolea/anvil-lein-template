@@ -6,8 +6,8 @@
 
   :pedantic? :abort
 
-  :dependencies [[org.clojure/clojure "1.10.0"]
-                 [mount "0.1.13"]]
+  :dependencies [[org.clojure/clojure "1.10.1"]
+                 [mount "0.1.16"]]
   :main ^:skip-aot {{name}}.core
   :target-path "target/%s"
   :source-paths ["src/clj" "src/cljs" "src/cljs/{{sanitized}}"]
@@ -18,13 +18,13 @@
             "fig-prod" ["trampoline" "run" "-m" "figwheel.main" "-O" "advanced" "-bo" "prod"]}
 
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[com.bhauman/figwheel-main "0.2.0"
+             :dev {:dependencies [[com.bhauman/figwheel-main "0.2.3"
                                    :exclusions [args4j commons-codec]]
                                   [com.bhauman/rebel-readline-cljs "0.1.4"
                                    :exclusions [args4j]]
-                                  [cider/piggieback "0.4.0"
+                                  [cider/piggieback "0.4.2"
                                    :exclusions [args4j]]
-                                  [org.clojure/clojurescript "1.10.520"
+                                  [org.clojure/clojurescript "1.10.597"
                                    :exclusions [com.google.errorprone/error_prone_annotations
                                                 com.google.code.findbugs/jsr305]]]
                    :source-paths ["env/dev/clj"]

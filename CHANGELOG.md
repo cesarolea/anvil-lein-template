@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## Unreleased
+### Modified
+- Upgraded dependencies
+
 ## 0.2.1 - 2019-05-17
 ### Modified
 - Added information about template options to readme.
