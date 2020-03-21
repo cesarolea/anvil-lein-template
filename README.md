@@ -34,9 +34,13 @@ Running `lein fig-dev` starts the figwheel process. At that point figwheel will 
 
 However you may want to connect the REPL to your editor. In that case the way you proceed is different:
 
+#### Without Docker
 - First run a regular **Clojure REPL** (not ClojureScript) by issuing `lein repl :headless :port 6666`. The `:headless :port 6666` is not necessary, but if you omit it, leiningen will create a REPL prompt and use a random port.
 - From your editor, connect to this Clojure REPL. In Emacs/Cider this is done by `cider-connect-clj` and enter `localhost` and `6666` when prompted for Host and Port, respectively.
 - Once in the Clojure REPL evaluate `(start)` and it should start the figwheel process. Navigate to `localhost:9500`, it should connect and at that moment the **ClojureScript REPL** is available and connected to your editor. You can use `C-c C-c` to send forms for evaluation, etc. Also saving a file will cause figwheel to reload your code in the browser.
+
+#### With Docker
+The workflow is very similar, the only difference is that the REPL will run inside the Docker container instead of your local computer. In order to start the REPL do `docker-compose up`. The container will start a REPL in port `6666`. Once the REPL is started, proceed as without Docker.
 
 ### Compiling
 
