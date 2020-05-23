@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file. This change
 
 ## Unreleased
 
-## 0.2.2 - 2020-03-21
+## 0.2.3 - 2020-03-21
 ### Modified
 - Upgraded dependencies.
 - Clarified how to run with Docker.
