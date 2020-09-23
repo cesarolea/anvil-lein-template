@@ -22,15 +22,15 @@ The purpose of this template is to get you started with ClojureScript as soon as
 
 There are some aliases defined:
 
-- `lein fig-dev` will start the fighweel REPL at `localhost:9500` but it won't start your browser by default. So you need to manually navigate to `localhost:9500` so that figwheel connects and the REPL is made available.
-- `lein fig-prod` will compile the project with all optimizations turned on and generate a single JS file, suitable for production use.
+- `lein fig:dev` will start the fighweel REPL at `localhost:9500` but it won't start your browser by default. So you need to manually navigate to `localhost:9500` so that figwheel connects and the REPL is made available.
+- `lein fig:prod` will compile the project with all optimizations turned on and generate a single JS file, suitable for production use.
 
 ### Options
 - `+docker` generates a `Dockerfile` and suitable `docker-compose.yml` to run the project in a Docker container, while keeping the ability to connect to the REPL and a working Figwheel.
 
 ### Development workflow
 
-Running `lein fig-dev` starts the figwheel process. At that point figwheel will reload your code every time a change is made, and you can see it live in your browser. Neat!
+Running `lein fig:dev` starts the figwheel process. At that point figwheel will reload your code every time a change is made, and you can see it live in your browser. Neat!
 
 However you may want to connect the REPL to your editor. In that case the way you proceed is different:
 
@@ -47,10 +47,14 @@ The workflow is very similar, the only difference is that the REPL will run insi
 From the project directory:
 
 ```
-lein fig-prod
+lein fig:prod
 ```
 
 It will generate JavaScript with all optimizations turned on. Output is written to `resources/public/cljs-out/prod-main.js`.
+
+### Linting
+
+Anvil comes with linting support thanks to `clj-kondo`. An alias is created for you; in order to run the linter with lein, you can do `lein clj-kondo --lint src`.
 
 ## Authors
 
@@ -58,7 +62,7 @@ It will generate JavaScript with all optimizations turned on. Output is written 
 
 ## License
 
-Copyright © 2019 César Olea
+Copyright © 2020 César Olea
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
