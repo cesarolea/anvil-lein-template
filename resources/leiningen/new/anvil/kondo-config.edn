@@ -1,0 +1,16 @@
+{:linters
+ {:unresolved-symbol {:exclude [(mount.core/defstate)
+                                (clojure.core.match/match)
+                                (compojure.core/routes)
+                                (clojure.java.jdbc/with-db-transaction)]
+                      :level :info}
+  :unused-referred-var {:level :off
+                        :exclude {clojure.tools.logging [info spy debug error warn]}}
+  :unused-binding {:exclude-destructured-keys-in-fn-args true
+                   :level :info}
+  :unused-namespace {:exclude [clojure.tools.logging]
+                     :level :off}
+  :unused-private-var {}}
+ :lint-as {mount.core/defstate clojure.core/def}
+ :consistent-alias {:aliases {clojure.string s}}
+ :refer {:level :error}}
