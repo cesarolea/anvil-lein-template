@@ -1,6 +1,6 @@
 (ns {{name}}.core
     (:require [figwheel.main.api :as fw-api]
-              [mount.core :refer [defstate start stop]])
+              [mount.core :refer [defstate start]])
     (:gen-class))
 
 (defstate ^{:on-reload :noop} figwheel
@@ -18,5 +18,5 @@
 
 (defn -main
   "Starts the Figwheel process"
-  [& args]
+  [& _]
   (start))
