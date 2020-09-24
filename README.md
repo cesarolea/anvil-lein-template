@@ -27,6 +27,14 @@ There are some aliases defined:
 
 ### Options
 - `+docker` generates a `Dockerfile` and suitable `docker-compose.yml` to run the project in a Docker container, while keeping the ability to connect to the REPL and a working Figwheel.
+- `+reagent` adds reagent support and a small example of how to use it.
+- `+reframe` pulls in the Re-Frame dependency and it will be ready to use in your own project, but there's no example (for now).
+
+A project with all the options included in the template:
+
+```
+lein new my-anvil +docker +reagent +reframe
+```
 
 ### Development workflow
 

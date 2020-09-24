@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
+
+## 0.2.4 - 2020-09-24
 ### Modified
 - Upgraded dependencies.
 - Added sample lein template section.
@@ -9,6 +11,7 @@ All notable changes to this project will be documented in this file. This change
 ### Added
 - Added linting support with clj-kondo.
 - Reagent support.
+- Re-Frame support. Only pulls the dependency for now, but there's no example on how to use it.
 
 ### Fixed
 - Issue when running with `pedantic? :abort`.
