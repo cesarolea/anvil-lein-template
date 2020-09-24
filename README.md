@@ -6,9 +6,9 @@ A leiningen template for a barebones ClojureScript project with figwheel-main.
 
 ## Getting Started
 
-- Create a project with leiningen `lein new anvil my-project`
-- `cd my-project`
-- `lein fig-dev`
+- Create a project with leiningen `lein new anvil my-anvil`
+- `cd my-anvil`
+- `lein fig:dev`
 - Browse to `localhost:9500`
 
 ## Prerequisites
