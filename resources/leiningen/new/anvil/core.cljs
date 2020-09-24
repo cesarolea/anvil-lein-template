@@ -1,4 +1,4 @@
-(ns {{name}}.core
+(ns {{#reagent}}^:figwheel-hooks{{/reagent}}{{name}}.core
     {{#reagent}}(:require [reagent.dom :as dom]){{/reagent}})
 (js/console.log "{{name}}")
 
@@ -6,7 +6,7 @@
 (defn greeting-component []
   [:div "Hello from Reagent!"])
 
-(defn mount-root []
+(defn ^:after-load mount-root []
   (dom/render [greeting-component]
               (.getElementById js/document "app")))
 
