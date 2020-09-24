@@ -28,7 +28,8 @@
                                   [cider/piggieback "0.5.1"]
                                   [org.clojure/clojurescript "1.10.773" :exclusions [com.google.code.findbugs/jsr305]]
                                   [ring/ring-devel "1.8.1" :exclusions [commons-codec]]
-                                  [clj-kondo "RELEASE"]]
+                                  [clj-kondo "RELEASE"]
+                                  {{#reagent}}[reagent "0.10.0"]{{/reagent}}]
                    :source-paths ["env/dev/clj"]
                    :clean-targets ^{:protect false} ["target"]
                    :repl-options {:init-ns user
