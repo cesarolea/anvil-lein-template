@@ -13,11 +13,10 @@
   "Creates a ClojureScript project with optional Docker support"
   ([name & opts]
    (main/info "Generating a new anvil project")
-   (clojure.pprint/pprint opts)
-   (let [data {:name name
-               :sanitized (name-to-path name)}
-         opts (into #{} opts)
-         parsed-opts (merge data (parse-opts opts))
+
+   (let [opts (into #{} opts)
+         data (merge {:name name
+                      :sanitized (name-to-path name)} (parse-opts opts))
          base [["src/clj/{{sanitized}}/core.clj" (render "core.clj" data)]
                ["src/cljs/{{sanitized}}/core.cljs" (render "core.cljs" data)]
                ["env/dev/clj/user.clj" (render "user.clj" data)]
@@ -25,7 +24,7 @@
                ["dev.cljs.edn" (render "dev.cljs.edn" data)]
                ["prod.cljs.edn" (render "prod.cljs.edn" data)]
                ["resources/public/index.html" (render "index.html" data)]
-               ["project.clj" (render "project.clj" parsed-opts)]
+               ["project.clj" (render "project.clj" data)]
                [".gitignore" (render "gitignore" data)]
                [".clj-kondo/config.edn" (render "kondo-config.edn" data)]]
          docker [["Dockerfile" (render "Dockerfile" data)]
