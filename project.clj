@@ -1,4 +1,4 @@
-(defproject anvil/lein-template "0.2.3"
+(defproject anvil/lein-template "0.2.4"
   :description "A barebones leiningen template for ClojureScript with figwheel-main"
   :url "https://github.com/cesarolea/anvil-lein-template"
   :deploy-repositories [["clojars" {:url "https://repo.clojars.org"
