@@ -22,15 +22,15 @@
             "clj-kondo" ["trampoline" "run" "-m" "clj-kondo.main"]}
 
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[com.bhauman/figwheel-main "0.2.11"
+             :dev {:dependencies [[com.bhauman/figwheel-main "0.2.12"
                                    :exclusions [org.clojure/java.classpath args4j commons-codec]]
                                   [com.bhauman/rebel-readline-cljs "0.1.4" :exclusions [args4j]]
-                                  [cider/piggieback "0.5.1"]
+                                  [cider/piggieback "0.5.2"]
                                   [org.clojure/clojurescript "1.10.773" :exclusions [com.google.code.findbugs/jsr305]]
-                                  [ring/ring-devel "1.8.1" :exclusions [commons-codec]]
+                                  [ring/ring-devel "1.8.2" :exclusions [commons-codec]]
                                   [clj-kondo "RELEASE"]
                                   {{#reagent}}[reagent "0.10.0"]{{/reagent}}
-                                  {{#reframe}}[re-frame "1.1.1"]{{/reframe}}]
+                                  {{#reframe}}[re-frame "1.1.2"]{{/reframe}}]
                    :source-paths ["env/dev/clj"]
                    :clean-targets ^{:protect false} ["target"]
                    :repl-options {:init-ns user

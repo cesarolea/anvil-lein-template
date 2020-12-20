@@ -3,9 +3,13 @@ All notable changes to this project will be documented in this file. This change
 
 ## Unreleased
 
-## 0.3.0 - 2020-09-24
+## 0.3.0 - 2020-12-20
 ### Fixed
 - Corrected documentation how to run the figwheel development repl.
+- Fixed issue when running with no options.
+
+### Modified
+- Upgraded dependencies.
 
 ## 0.2.4 - 2020-09-24
 ### Modified

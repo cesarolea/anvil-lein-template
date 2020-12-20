@@ -6,7 +6,9 @@
 
 (defn- parse-opts [opts]
   (reduce (fn [accum opt]
-            (conj accum {(keyword (subs opt 1)) opt}))
+            (if opt
+              (conj accum {(keyword (subs opt 1)) opt})
+              accum))
           {} opts))
 
 (defn anvil
