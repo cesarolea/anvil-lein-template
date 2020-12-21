@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file. This change
 
 ## Unreleased
 
+## 0.3.2
+### Fixed
+- Confusing dependencies when pulling newest ClojureScript.
+
 ## 0.3.1 - 2020-12-20
 ### Fixed
 - Corrected documentation how to run the figwheel development repl.

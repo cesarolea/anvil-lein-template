@@ -28,7 +28,8 @@
                                   [cider/piggieback "0.5.2"]
                                   [org.clojure/clojurescript "1.10.773" :exclusions [com.google.code.findbugs/jsr305]]
                                   [ring/ring-devel "1.8.2" :exclusions [commons-codec]]
-                                  [clj-kondo "RELEASE"]
+                                  [clj-kondo "RELEASE" :exclusions [com.cognitect/transit-clj
+                                                                    com.cognitect/transit-java]]
                                   {{#reagent}}[reagent "0.10.0"]{{/reagent}}
                                   {{#reframe}}[re-frame "1.1.2"]{{/reframe}}]
                    :source-paths ["env/dev/clj"]
