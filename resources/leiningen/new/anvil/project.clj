@@ -31,7 +31,7 @@
                                   [ring/ring-devel "1.8.2" :exclusions [commons-codec]]
                                   [clj-kondo "RELEASE" :exclusions [com.cognitect/transit-clj
                                                                     com.cognitect/transit-java]]
-                                  {{#reagent}}[reagent "0.10.0"]{{/reagent}}
+                                  {{#reagent}}[reagent "1.0.0"]{{/reagent}}
                                   {{#reframe}}[re-frame "1.1.2"]{{/reframe}}]
                    :source-paths ["env/dev/clj"]
                    :clean-targets ^{:protect false} ["target"]

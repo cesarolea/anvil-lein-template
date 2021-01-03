@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file. This change
 - Option to compile for AWS lambda in a nodejs runtime
 - Ability to use npm packages
 
+### Modified
+- Upgraded to reagent 1.0.0
+
 ## 0.3.2
 ### Fixed
 - Confusing dependencies when pulling newest ClojureScript.
