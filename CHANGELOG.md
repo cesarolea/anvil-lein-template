@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file. This change
 
 ## Unreleased
 ### Added
-- Ability to bundle npm libraries
+- Option to compile for AWS lambda in a nodejs runtime
+- Ability to use npm packages
 
 ## 0.3.2
 ### Fixed

@@ -1,0 +1,2 @@
+{:main {{name}}.core
+ :output-to "target/public/cljs-out/lambda/index.js"}

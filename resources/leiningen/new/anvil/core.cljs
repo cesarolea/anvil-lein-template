@@ -14,7 +14,7 @@
   (mount-root))
 {{/reagent}}
 
-{{^reagent}}
+{{#reagent}}
 (defn say-hello
   []
   (-> js/document
@@ -24,3 +24,20 @@
 
 (say-hello)
 {{/reagent}}
+
+{{#lambda}}
+(defn say-hello []
+  (js/console.log "Hello World!"))
+
+(defn handler
+  "Lambda main entry point"
+  [event context callback]
+  (do
+    (println event)
+    (callback nil
+              (clj->js {:status 200
+                        :body "Hello from ClojureScript in AWS lambda!"
+                        :headers {}}))))
+
+(set! (.-exports js/module) #js{:handler handler :hello say-hello})
+{{/lambda}}

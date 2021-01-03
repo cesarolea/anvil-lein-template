@@ -25,12 +25,22 @@
                ["figwheel-main.edn" (render "figwheel-main.edn" data)]
                ["dev.cljs.edn" (render "dev.cljs.edn" data)]
                ["prod.cljs.edn" (render "prod.cljs.edn" data)]
+               ["lambda.cljs.edn" (render "lambda.cljs.edn" data)]
                ["resources/public/index.html" (render "index.html" data)]
                ["project.clj" (render "project.clj" data)]
                [".gitignore" (render "gitignore" data)]
                [".clj-kondo/config.edn" (render "kondo-config.edn" data)]]
          docker [["Dockerfile" (render "Dockerfile" data)]
                  ["docker-compose.yml" (render "docker-compose.yml" data)]]]
+
+     (when (and (contains? opts "+lambda")
+                (or (contains? opts "+reagent")
+                    (contains? opts "+reframe")))
+
+       (binding [*out* *err*]
+         (println "+lambda and +reagent/+reframe are mutually exclusive!"))
+
+       (System/exit -1))
 
      (apply ->files data
             (cond

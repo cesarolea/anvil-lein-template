@@ -15,6 +15,7 @@ A leiningen template for a barebones ClojureScript project with figwheel-main.
 
 - Clojure
 - leiningen
+- node (optional, for using npm dependencies)
 
 ## Usage
 
@@ -24,11 +25,13 @@ There are some aliases defined:
 
 - `lein fig:dev` will start the fighweel REPL at `localhost:9500` but it won't start your browser by default. So you need to manually navigate to `localhost:9500` so that figwheel connects and the REPL is made available.
 - `lein fig:prod` will compile the project with all optimizations turned on and generate a single JS file, suitable for production use.
+- `lein fig:lambda` will compile the project and produce a ES6 module that can be executed by node. It also creates an AWS lambda entrypoint and deployment scripts.
 
 ### Options
 - `+docker` generates a `Dockerfile` and suitable `docker-compose.yml` to run the project in a Docker container, while keeping the ability to connect to the REPL and a working Figwheel.
 - `+reagent` adds reagent support and a small example of how to use it.
 - `+reframe` pulls in the Re-Frame dependency and it will be ready to use in your own project, but there's no example (for now).
+- `+lambda` creates an ES6 module project and deployment scripts to run your project as a lambda function in AWS. The project is configured to pull JS dependencies from npm. This option is mutually exclusive with `+reagent` and `+reframe`.
 
 A project with all the options included in the template:
 
@@ -64,13 +67,17 @@ It will generate JavaScript with all optimizations turned on. Output is written 
 
 Anvil comes with linting support thanks to `clj-kondo`. An alias is created for you; in order to run the linter with lein, you can do `lein clj-kondo --lint src`.
 
+### Lambda and npm dependencies
+
+TBD
+
 ## Authors
 
 * **César Olea** - *Initial work* - [Personal Homepage](https://blog.cesarolea.com)
 
 ## License
 
-Copyright © 2020 César Olea
+Copyright © 2021 César Olea
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at

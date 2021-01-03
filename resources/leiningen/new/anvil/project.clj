@@ -16,10 +16,11 @@
   :source-paths ["src/clj" "src/cljs" "src/cljs/{{sanitized}}"]
   :resource-paths ["resources"]
 
-  :aliases {"fig"       ["trampoline" "run" "-m" "figwheel.main"]
-            "fig:dev"   ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]
-            "fig:prod"  ["trampoline" "run" "-m" "figwheel.main" "-O" "advanced" "-bo" "prod"]
-            "clj-kondo" ["trampoline" "run" "-m" "clj-kondo.main"]}
+  :aliases {"fig"        ["trampoline" "run" "-m" "figwheel.main"]
+            "fig:dev"    ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]
+            "fig:prod"   ["trampoline" "run" "-m" "figwheel.main" "-O" "advanced" "-bo" "prod"]
+            {{#lambda}}"fig:lambda" ["trampoline" "run" "-m" "figwheel.main" "-O" "advanced" "-bo" "lambda"]{{/lambda}}
+            "clj-kondo"  ["trampoline" "run" "-m" "clj-kondo.main"]}
 
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[com.bhauman/figwheel-main "0.2.12"
